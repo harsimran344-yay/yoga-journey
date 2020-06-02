@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/content": "0.3.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
