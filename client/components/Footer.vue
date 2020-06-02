@@ -3,7 +3,3 @@
         This is Footer
     </div>
 </template>
-
-<style>
-
-</style>
