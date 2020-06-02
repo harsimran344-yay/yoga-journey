@@ -11,11 +11,9 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div>
-      <YogaImage />
-      <YogaText />
-    </div>
+  <div>
+    <YogaImage />
+    <YogaText />
   </div>
 </template>
 
@@ -25,12 +23,4 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 </style>
