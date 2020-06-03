@@ -1,9 +1,15 @@
 <template>
     <div>
-        This is Navigation Bar
+        <ul>
+            <li>
+                <nuxt-link to="/">HOME</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/about">ABOUT</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/contact">CONTACT</nuxt-link>
+            </li>
+        </ul>
     </div>
 </template>
-
-<style>
-
-</style>
