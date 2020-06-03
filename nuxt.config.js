@@ -1,6 +1,5 @@
 
 export default {
-  srcDir: 'client/',
   mode: 'universal',
   /*
   ** Headers of the page
