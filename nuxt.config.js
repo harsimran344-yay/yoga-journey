@@ -1,3 +1,4 @@
+const path = require('path')
 
 export default {
   mode: 'universal',
@@ -23,6 +24,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/css/tailwind.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -46,12 +48,25 @@ export default {
   ** Build configuration
   */
   build: {
+    postcss: {
+      plugins: {
+        'postcss-import': {},
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        'postcss-nested': {}
+      }
+    },
+    preset: {
+      stage: 1 // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+    },
     /*
     ** You can extend webpack config here
     */
     extend (config, ctx) {
     }
   },
+  /*
+  ** Server configuration
+  */
   server: {
     port: 8000, // default: 3000
     host: '0.0.0.0', // default: localhost,

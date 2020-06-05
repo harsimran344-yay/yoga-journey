@@ -1,5 +1,25 @@
 /* purgecss start ignore */
 @import 'tailwindcss/base';
+
+/* html {
+    @apply font-default;
+} */
+
 @import 'tailwindcss/components';
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../fonts/OpenSans-Regular.ttf") format("ttf"),
+        url("../fonts/OpenSans-Light.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../fonts/OpenSans-SemiBold.ttf") format("ttf");
+    font-weight: 600;
+    font-style: normal;
+}  
