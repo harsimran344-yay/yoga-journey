@@ -11,13 +11,19 @@ module.exports = {
       'laptop': '1024px',
       'desktop': '1280px'
     },
-  },
-  colors: {
-    indigo: '#5c6ac4',
-    blue: '#007ace',
-    red: '#de3618'
-  },
-  fontFamily: {
-    default: ['OpenSans']
+    colors: {
+      indigo: '#5c6ac4',
+      blue: '#007ace',
+      red: {
+        regular: '#de3618',
+        dark: '#A52A2A'
+      },
+      pink: {
+        light: '#FFB6C1'
+      }
+    },
+    fontFamily: {
+      default: ['OpenSans']
+    }
   }
 }
