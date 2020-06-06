@@ -1,5 +1,17 @@
+<script>
+export default {
+  props: {
+    content: {
+        type: String,
+        default: null
+    }
+  }
+}
+</script>
+
+
 <template>
-    <div>
-        This is Text component
+    <div class="w-6/12 flex items-center">
+        {{ content }}
     </div>
 </template>
