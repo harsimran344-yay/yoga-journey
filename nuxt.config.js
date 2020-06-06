@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path').join
+const tailwindcss = path(__dirname, 'tailwind.config.js')
 
 export default {
   mode: 'universal',
@@ -42,27 +43,34 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/content"
+    "@nuxtjs/content",
+    'nuxt-purgecss'
   ],
   /*
   ** Build configuration
   */
   build: {
     postcss: {
-      plugins: {
-        'postcss-import': {},
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-        'postcss-nested': {}
-      }
+      plugins: [
+        require('tailwindcss')(tailwindcss), 
+        require('autoprefixer')
+      ]
     },
     preset: {
-      stage: 1 // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+      autoprefixer: {
+        grid: true
+      }
     },
     /*
     ** You can extend webpack config here
     */
     extend (config, ctx) {
     }
+  },
+
+  purgeCSS: {
+    mode: 'postcss',
+    enabled: (process.env.NODE_ENV === 'production') //TODO: add env later
   },
   /*
   ** Server configuration
