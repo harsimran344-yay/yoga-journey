@@ -16,9 +16,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h1>{{ page.description }}</h1>
+  <div class="p-2 flex justify-between">
     <YogaImage />
-    <YogaText />
+    <YogaText :content="page.description" />
   </div>
 </template>
