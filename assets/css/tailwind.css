@@ -1,9 +1,9 @@
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 
-/* html {
+html {
     @apply font-default;
-} */
+}
 
 @import 'tailwindcss/components';
 /* purgecss end ignore */
