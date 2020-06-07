@@ -1,14 +1,13 @@
 <script>
+import { ContentMixin } from '~/mixins/content'
+
 export default {
-    async asyncData ({ $content }) {
-    const page = await $content('about/about').fetch()
-    return { page }
-  }
+    mixins: [ContentMixin]
 }
 </script>
 
 <template>
     <div>
-        <h1>{{ page.description }}</h1>
+        <h1>{{ content.description }}</h1>
     </div>
 </template>
